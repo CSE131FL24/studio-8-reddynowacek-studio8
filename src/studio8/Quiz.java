@@ -26,6 +26,15 @@ public class Quiz {
 	}
 	
 	public void takeQuiz() {
+		int quizSum = 0;
+		for(Question q : questions) {
+			q.displayPrompt();
+			int a = q.checkAnswer(getUserAnswer());
+			System.out.println(a);
+			quizSum+=a;
+		}
+		System.out.print(quizSum + "/");
+		System.out.println(getTotalPoints());
 		//FIXME
 	}
 	
